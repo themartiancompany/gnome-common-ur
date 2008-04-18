@@ -1,4 +1,3 @@
-# $Id: PKGBUILD,v 1.33 2007/09/22 12:47:33 jgc Exp $
 # Maintainer: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-common
