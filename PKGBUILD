@@ -1,5 +1,13 @@
 # Maintainer: Jan de Groot <jgc@archlinux.org>
 
+_os="$( \
+  uname \
+    -o)"
+if [[ "${_os}" == "Android" ]]; then
+  _shell="bash"
+elif [[ "${_os}" == "GNU/Linux" ]]; then
+  _shell="sh"
+fi
 _proj="gnome"
 pkgname="${_proj}-common"
 pkgver=3.18.0
@@ -9,7 +17,7 @@ arch=(
   'any'
 )
 depends=(
-  'sh'
+  "${_shell}"
   'autoconf-archive'
   'intltool'
   'yelp-tools'
